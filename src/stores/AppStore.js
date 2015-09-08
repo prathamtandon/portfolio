@@ -1,5 +1,3 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 import EventEmitter from 'eventemitter3';
 import Dispatcher from '../core/Dispatcher';
 import ActionTypes from '../constants/ActionTypes';

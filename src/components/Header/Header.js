@@ -1,10 +1,9 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 import React from 'react';
 import styles from './Header.less';
 import withStyles from '../../decorators/withStyles';
-import Link from '../../utils/Link';
 import Navigation from '../Navigation';
+import ProfileImage from '../ProfileImage/ProfileImage';
+import Social from '../Social/Social';
 
 @withStyles(styles)
 class Header {
@@ -13,14 +12,11 @@ class Header {
     return (
       <div className="Header">
         <div className="Header-container">
-          <a className="Header-brand" href="/" onClick={Link.handleClick}>
-            <img className="Header-brandImg" src={require('./logo-small.png')} width="38" height="38" alt="React" />
-            <span className="Header-brandTxt">Your Company</span>
-          </a>
           <Navigation className="Header-nav" />
           <div className="Header-banner">
-            <h1 className="Header-bannerTitle">React</h1>
-            <p className="Header-bannerDesc">Complex web apps made easy</p>
+            <ProfileImage />
+            <Social />
+            <h3><a href='/' className="Header-bannerTitle">Pratham's Webspace</a></h3>
           </div>
         </div>
       </div>

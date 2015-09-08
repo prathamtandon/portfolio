@@ -1,11 +1,3 @@
-/*
- * React.js Starter Kit
- * Copyright (c) Konstantin Tarkus (@koistya), KriaSoft LLC
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 import path from 'path';
 import cp from 'child_process';
 import gulp from 'gulp';
@@ -168,7 +160,7 @@ gulp.task('sync', ['serve'], cb => {
 gulp.task('deploy', cb => {
   const push = require('git-push');
   const remote = argv.production ?
-    'https://github.com/{user}/{repo}.git' :
+    'https://prathamt@prathamt.scm.azurewebsites.net:443/prathamt.git' :
     'https://github.com/{user}/{repo}-test.git';
   push('./build', remote, cb);
 });

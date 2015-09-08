@@ -1,5 +1,3 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 import React, { PropTypes } from 'react';
 import styles from './ContactPage.less';
 import withStyles from '../../decorators/withStyles';
@@ -12,13 +10,12 @@ class ContactPage {
   };
 
   render() {
-    let title = 'Contact Us';
+    let title = 'Contact';
     this.context.onSetTitle(title);
     return (
       <div className="ContactPage">
         <div className="ContactPage-container">
           <h1>{title}</h1>
-          <p>...</p>
         </div>
       </div>
     );

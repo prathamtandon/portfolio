@@ -3,6 +3,7 @@
 import React, { PropTypes } from 'react';
 import styles from './ContentPage.less';
 import withStyles from '../../decorators/withStyles';
+import Widget from '../Widget/Widget.jsx';
 
 @withStyles(styles)
 class ContentPage {
@@ -25,7 +26,15 @@ class ContentPage {
           {
             this.props.path === '/' ? null : <h1>{this.props.title}</h1>
           }
-          <div dangerouslySetInnerHTML={{__html: this.props.content || ''}} />
+          <div className='content-container'>
+            <div dangerouslySetInnerHTML={{__html: this.props.content || ''}} />
+          </div>
+          <div className='widget-container'>
+            <Widget displayName='Resume' displayImage='./resume.png' />
+            <Widget displayName='Work' displayImage='./programming.png' />
+            <Widget displayName='Blog' displayImage='./thought.png' />
+            <Widget displayName='Contact' displayImage='./send.png' />
+          </div>
         </div>
       </div>
     );

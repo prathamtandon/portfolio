@@ -1,0 +1,28 @@
+.widget {
+  width: 90px;
+  height: 90px;
+  display: block;
+  line-height: 70px;
+  opacity: 0.5;
+  transition: opacity 0.75s ease-in-out 0s;
+}
+
+img.widget:hover {
+  opacity: 1;
+}
+
+.widget-link {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.75s ease 0s;
+}
+
+a.widget-link:hover {
+  color: rgb(255,255,255);
+}
