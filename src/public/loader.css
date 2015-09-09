@@ -1,0 +1,6 @@
+#cover {
+  background: url(loader.gif) no-repeat scroll center center #FFF;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}

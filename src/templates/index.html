@@ -1,5 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="">
+  <body>
+    <link rel="stylesheet" href="loader.css" type="text/css"/>
+    <div id="cover"></div>
+    <div id="container" style="display: none;">
+      <div id="app"><%= body %></div>
+      <script src="/app.js"></script>
+    </div>
+  </body>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +16,4 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style id="css"><%= css %></style>
   </head>
-  <body>
-    <div id="app"><%= body %></div>
-    <script src="/app.js"></script>
-  </body>
 </html>

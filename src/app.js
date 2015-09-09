@@ -50,10 +50,15 @@ function run() {
 // and page content is loaded
 Promise.all([
   new Promise((resolve) => {
+    let loader = () => {
+      document.getElementById('cover').style.display = 'none';
+      document.getElementById('container').style.display = 'block';
+      resolve();
+    };
     if (window.addEventListener) {
-      window.addEventListener('DOMContentLoaded', resolve);
+      window.addEventListener('load', loader);
     } else {
-      window.attachEvent('onload', resolve);
+      window.attachEvent('load', loader);
     }
   }).then(() => FastClick.attach(document.body)),
   new Promise((resolve) => AppActions.loadPage(path, resolve))
