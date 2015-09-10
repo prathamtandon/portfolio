@@ -12,7 +12,7 @@ class Social {
           <img src='./linkedin.png' className='icon'></img>
           <span>LinkedIn</span>
         </a>
-        <a className='github' target='_blank' href='https://github.com/Haspratham'>
+        <a className='github' target='_blank' href='https://github.com/prthrokz'>
           <img src='./Github.png' className='icon'></img>
           <span>Github</span>
         </a>
