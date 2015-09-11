@@ -12,7 +12,7 @@ export default class Widget extends React.Component {
 
   render () {
     return (
-      <a className='widget-link' href='#'>
+      <a className='widget-link' href={this.props.widgetLink}>
         <img className='widget' src={this.props.displayImage} />
         <span>{this.props.displayName}</span>
       </a>
