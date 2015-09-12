@@ -33,7 +33,7 @@ class ContentPage {
             <Widget widgetLink='#' displayName='Resume' displayImage='./resume.png' />
             <Widget widgetLink='https://github.com/prthrokz' displayName='Work' displayImage='./programming.png' />
             <Widget widgetLink='#' displayName='Blog' displayImage='./thought.png' />
-            <Widget widgetLink='#' displayName='Contact' displayImage='./send.png' />
+            <Widget widgetLink='/contact' displayName='Contact' displayImage='./send.png' />
           </div>
         </div>
       </div>

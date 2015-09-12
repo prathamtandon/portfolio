@@ -39,19 +39,24 @@ class App {
       case '/':
         let page = AppStore.getPage(this.props.path);
         component = React.createElement(pages[page.component], page);
-        break;
+        return (
+          <div>
+            <Header />
+            {component}
+          </div>
+        );
 
       case '/contact':
         component = <ContactPage />;
-        break;
-    }
+        return (
+          <div>
+          {component}
+          </div>
+        );
 
-    return component ? (
-      <div>
-        <Header />
-        {component}
-      </div>
-    ) : <NotFoundPage />;
+      default:
+         return <NotFoundPage />;
+    }
   }
 
   handlePopState(event) {
