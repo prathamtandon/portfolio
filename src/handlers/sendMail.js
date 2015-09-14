@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import config from 'config';
+import config from '../../config.js';
 
 function getSmtpTransport(service, user, pass) {
   return nodemailer.createTransport('SMTP', {
@@ -24,13 +24,14 @@ export default function sendMail(req, res) {
     to: config.email.user,
     subject: `${config.email.subject} [${req.body.sender}]`,
     body: req.body.text
-  }, (error, response) => {
+  }, (error) => {
     if(error) {
-      res.status(500)
+      console.log(error);
+      res.status(500);
       res.send('Unable to send mail!');
     } else {
       res.status(200);
       res.send('Thank you! I will contact you as soon as possible');
     }
   });
-};
+}

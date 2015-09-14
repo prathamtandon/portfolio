@@ -10,6 +10,7 @@ import webpack, { DefinePlugin, BannerPlugin } from 'webpack';
 import merge from 'lodash/object/merge';
 import autoprefixer from 'autoprefixer-core';
 import minimist from 'minimist';
+import path from 'path';
 
 const argv = minimist(process.argv.slice(2));
 const DEBUG = !argv.release;
@@ -95,10 +96,6 @@ const config = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },
-      {
-        test: /\.json$/,
-        loader: 'json'
       }
     ]
   },
@@ -161,11 +158,6 @@ const serverConfig = merge({}, config, {
         loader: loader.loader = loader.loader.replace(STYLE_LOADER + '!', '')
       });
     })
-  },
-  resolve: {
-    alias: {
-      'config': path.resolve(__dirname, 'config.json')
-    }
   }
 });
 

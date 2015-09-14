@@ -5,4 +5,4 @@ build
 node_modules
 npm-debug.log
 .idea
-config.json
+config.js

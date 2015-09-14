@@ -11,7 +11,7 @@ class ContactForm extends React.Component {
         <div className='form-main'>
           <div className='form-div'>
             <h3 className='form-label'>Message Me!</h3>
-            <form className='form' action='/sendmail'>
+            <form className='form' action='sendmail' method='post'>
               <p className='name'>
                 <input id='name' className='feedback-input' type='text' placeholder='Name' name='sender' required/>
               </p>

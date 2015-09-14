@@ -11,11 +11,13 @@ import './stores/AppStore';
 import db from './core/Database';
 import App from './components/App';
 import sendMailHandler from './handlers/sendMail';
+import bodyParser from 'body-parser';
 
 const server = express();
 
 server.set('port', (process.env.PORT || 5000));
 server.use(express.static(path.join(__dirname, 'public')));
+server.use(bodyParser());
 
 //
 // Register API middleware
