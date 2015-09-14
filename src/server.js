@@ -10,6 +10,7 @@ import './core/Dispatcher';
 import './stores/AppStore';
 import db from './core/Database';
 import App from './components/App';
+import sendMailHandler from './handlers/sendMail';
 
 const server = express();
 
@@ -58,6 +59,8 @@ server.get('*', async (req, res, next) => {
     next(err);
   }
 });
+
+server.post('/sendmail', sendMailHandler);
 
 //
 // Launch the server

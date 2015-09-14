@@ -95,6 +95,10 @@ const config = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   },
@@ -157,6 +161,11 @@ const serverConfig = merge({}, config, {
         loader: loader.loader = loader.loader.replace(STYLE_LOADER + '!', '')
       });
     })
+  },
+  resolve: {
+    alias: {
+      'config': path.resolve(__dirname, 'config.json')
+    }
   }
 });
 
