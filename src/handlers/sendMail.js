@@ -28,7 +28,7 @@ export default function sendMail(req, res) {
     if(error) {
       console.log(error);
       res.status(500);
-      res.send('Unable to send mail!');
+      res.send(error + 'Unable to send mail!');
     } else {
       res.status(200);
       res.send('Thank you! I will contact you as soon as possible');
