@@ -27,7 +27,7 @@ gulp.task('clean', cb => {
 
 // Static files
 gulp.task('assets', () => {
-  src.assets = 'src/public/**';
+  src.assets = ['src/public/**','src/site_docs/**'];
   return gulp.src(src.assets)
     .pipe($.changed('build/public'))
     .pipe(gulp.dest('build/public'))

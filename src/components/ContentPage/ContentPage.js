@@ -30,7 +30,7 @@ class ContentPage {
             <div dangerouslySetInnerHTML={{__html: this.props.content || ''}} />
           </div>
           <div className='widget-container'>
-            <Widget widgetLink='#' displayName='Resume' displayImage='./resume.png' />
+            <Widget widgetLink='/resume.pdf' displayName='Resume' displayImage='./resume.png' />
             <Widget widgetLink='https://github.com/prthrokz' displayName='Work' displayImage='./programming.png' />
             <Widget widgetLink='#' displayName='Blog' displayImage='./thought.png' />
             <Widget widgetLink='/contact' displayName='Contact' displayImage='./send.png' />
