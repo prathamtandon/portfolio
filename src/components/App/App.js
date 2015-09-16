@@ -1,4 +1,3 @@
-import React, { PropTypes } from 'react';
 import styles from './App.less';
 import withContext from '../../decorators/withContext';
 import withStyles from '../../decorators/withStyles';
@@ -9,6 +8,8 @@ import ContentPage from '../ContentPage';
 import ContactPage from '../ContactPage';
 import NotFoundPage from '../NotFoundPage';
 
+let React = require('react');
+
 const pages = { ContentPage, ContactPage, NotFoundPage };
 
 @withContext
@@ -16,7 +17,7 @@ const pages = { ContentPage, ContactPage, NotFoundPage };
 class App {
 
   static propTypes = {
-    path: PropTypes.string.isRequired
+    path: React.PropTypes.string.isRequired
   };
 
   componentDidMount() {
@@ -33,30 +34,32 @@ class App {
 
   render() {
     let component;
+    let jsx;
 
     switch (this.props.path) {
 
       case '/':
         let page = AppStore.getPage(this.props.path);
         component = React.createElement(pages[page.component], page);
-        return (
+        jsx =
           <div>
             <Header />
             {component}
-          </div>
-        );
+          </div>;
+        break;
 
       case '/contact':
         component = <ContactPage />;
-        return (
+        jsx =
           <div>
           {component}
-          </div>
-        );
+          </div>;
+        break;
 
       default:
-         return <NotFoundPage />;
+         jsx = <NotFoundPage />;
     }
+    return jsx;
   }
 
   handlePopState(event) {

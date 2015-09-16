@@ -18,6 +18,15 @@ body {
   background: url(background.png) no-repeat;
 }
 
+.loader-appear {
+  opacity: 0.01;
+}
+
+.loader-appear.loader-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
