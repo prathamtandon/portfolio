@@ -1,5 +1,3 @@
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 import React, { PropTypes } from 'react';
 import styles from './ContentPage.less';
 import withStyles from '../../decorators/withStyles';
@@ -32,7 +30,7 @@ class ContentPage {
           <div className='widget-container'>
             <Widget widgetLink='/resume.pdf' displayName='Resume' displayImage='./resume.png' />
             <Widget widgetLink='https://github.com/prthrokz' displayName='Work' displayImage='./programming.png' />
-            <Widget widgetLink='#' displayName='Blog' displayImage='./thought.png' />
+            <Widget widgetLink='/blog' displayName='Blog' displayImage='./thought.png' />
             <Widget widgetLink='/contact' displayName='Contact' displayImage='./send.png' />
           </div>
         </div>

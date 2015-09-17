@@ -26,7 +26,7 @@ export default class HorizontalNav extends React.Component {
             <a className='work' href='https://github.com/prthrokz'>
               <span>Work</span>
             </a>
-            <a className='blog' href='/#'>
+            <a className='blog' href='/blog'>
               <span className={this.props.selected === 'blog' ? 'selected' : ''}>Blog</span>
             </a>
             <a className='contact' href='/contact'>
