@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import styles from './ContactPage.less';
-import HorizontalNav from '../HorizontalNav/HorizontalNav';
 import ContactForm from '../ContactForm/ContactForm';
 import withStyles from '../../decorators/withStyles';
 
@@ -16,7 +15,6 @@ class ContactPage {
     this.context.onSetTitle(title);
     return (
       <div className="ContactPage">
-        <HorizontalNav />
         <ContactForm />
       </div>
     );

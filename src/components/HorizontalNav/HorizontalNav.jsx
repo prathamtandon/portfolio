@@ -6,6 +6,10 @@ import Social from '../Social/Social';
 @withStyles(styles)
 export default class HorizontalNav extends React.Component {
 
+  static propTypes = {
+    selected: PropTypes.string.isRequired
+  };
+
   render() {
     return (
       <section className='home'>
@@ -23,10 +27,10 @@ export default class HorizontalNav extends React.Component {
               <span>Work</span>
             </a>
             <a className='blog' href='/#'>
-              <span>Blog</span>
+              <span className={this.props.selected === 'blog' ? 'selected' : ''}>Blog</span>
             </a>
             <a className='contact' href='/contact'>
-              <span className='selected'>Contact</span>
+              <span className={this.props.selected === 'contact' ? 'selected' : ''}>Contact</span>
             </a>
           </nav>
           <Social />

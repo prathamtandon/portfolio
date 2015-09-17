@@ -7,6 +7,7 @@ import Header from '../Header';
 import ContentPage from '../ContentPage';
 import ContactPage from '../ContactPage';
 import NotFoundPage from '../NotFoundPage';
+import HorizontalNav from '../HorizontalNav/HorizontalNav';
 
 let React = require('react');
 
@@ -52,9 +53,13 @@ class App {
         component = <ContactPage />;
         jsx =
           <div>
-          {component}
+            <HorizontalNav selected='contact' />
+            {component}
           </div>;
         break;
+
+      //case '/blog':
+      //  component = <Blog />;
 
       default:
          jsx = <NotFoundPage />;
