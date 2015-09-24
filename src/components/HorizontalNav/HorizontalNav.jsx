@@ -23,7 +23,7 @@ export default class HorizontalNav extends React.Component {
             <a className='resume' href='/resume.pdf'>
               <span>Resume</span>
             </a>
-            <a className='work' href='https://github.com/prthrokz'>
+            <a className='work' href='https://github.com/prathamtandon'>
               <span>Work</span>
             </a>
             <a className='blog' href='/blog'>

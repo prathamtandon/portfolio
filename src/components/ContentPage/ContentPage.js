@@ -29,7 +29,7 @@ class ContentPage {
           </div>
           <div className='widget-container'>
             <Widget widgetLink='/resume.pdf' displayName='Resume' displayImage='./resume.png' />
-            <Widget widgetLink='https://github.com/prthrokz' displayName='Work' displayImage='./programming.png' />
+            <Widget widgetLink='https://github.com/prathamtandon' displayName='Work' displayImage='./programming.png' />
             <Widget widgetLink='/blog' displayName='Blog' displayImage='./thought.png' />
             <Widget widgetLink='/contact' displayName='Contact' displayImage='./send.png' />
           </div>
